@@ -1,0 +1,31 @@
+---
+import Products from "@/components/icons/services/Products.astro";
+import Design from "@/components/icons/services/Design.astro";
+import Map from "@/components/icons/services/MapSite.astro";
+import Contact from "@/components/icons/services/Contact.astro";
+---
+
+<section class="w-screen py-16">
+  <div
+    class="flex flex-row flex-grow flex-wrap gap-10 justify-center items-center font-extrabold"
+  >
+    <article class="flex flex-col  justify-center items-center">
+      <a href="/" class="p-5 hover:scale-110 rounded-full mb-3 hover:bg-yellow-500 transition bg-[#FDD069] ease-in-out">
+        <Products class="size-10 rounded-full" />
+      </a>
+      <h6>Reutilización de Materiales</h6>
+    </article>
+    <article class="flex flex-col  justify-center items-center">
+      <a href="/" class="p-5 hover:scale-110 rounded-full mb-3 hover:bg-purple-700  transition bg-[#9e6be2e7] ease-in-out">
+        <Map class="size-10 rounded-full" />
+      </a>
+      <h6>Productos Artesanales de Excelente Calidad</h6>
+    </article>
+    <article class="flex flex-col  justify-center items-center">
+      <a href="/" class="p-5 hover:scale-110 rounded-full mb-3 bg-green-600  transition hover:bg-[#327D33] ease-in-out">
+        <Design class="size-10 rounded-full" />
+      </a>
+      <h6>Mano de Obra Creativa</h6>
+    </article>
+  </div>
+</section>
