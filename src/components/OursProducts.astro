@@ -3,17 +3,19 @@ import { PRODUCTS } from "@/lib/products.ts";
 interface Props {}
 ---
 
-<section class="relative flex flex-row flex-wrap gap-8">
+<section class="flex flex-col">
+  <div class="relative flex flex-row justify-center items-center flex-wrap gap-5">
+
   
     {
       PRODUCTS.map((product) => (
-        <div class="my-7 relative group duration-500 shadow-lg shadow-neutral-600 cursor-pointer group overflow-hidden text-gray-50 h-72 w-56 rounded-2xl hover:duration-700">
+        <div class="my-7 relative group duration-500 shadow-lg shadow-neutral-600 cursor-pointer group overflow-hidden text-gray-50 h-72 w-64 rounded-2xl hover:duration-700">
           <img
-            class="w-56 h-72 bg-transparent text-gray-800  hover:scale-110 transition"
+            class="w-full h-64 bg-transparent text-gray-800  hover:scale-110 transition"
             src={product.img}
             alt={`imagen del producto ${product.name}`}
           />
-          <div class="absolute bg-gray-50 -bottom-28 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+          <div class="absolute bg-gray-50 -bottom-28 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
             <div class="flex flex-row gap-6">
               <div class="flex flex-col">
                 <span class="uppercase font-extrabold text-yellow-700 text-xs pb-2">
@@ -34,7 +36,8 @@ interface Props {}
         </div>
       ))
     }
-    <a class="mx-auto text-center bg-slate-400 px-3 py-1 text-white rounded-xl text-base"href="/">Ver Todos los Productos</a>
+    </div>
+    <a class="mx-auto text-center text-base mt-10 bg-slate-600 hover:bg-yellow-200 transition hover:text-[#012029] text-white font-extrabold px-3 py-1 rounded-lg inline-block"href="/">Ver Todos los Productos</a>
 </section>
 
 <style>
