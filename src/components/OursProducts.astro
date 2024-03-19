@@ -3,11 +3,11 @@ import { PRODUCTS } from "@/lib/products.ts";
 interface Props {}
 ---
 
-<section class="flex flex-row flex-wrap gap-8">
+<section class="relative flex flex-row flex-wrap gap-8">
   
     {
       PRODUCTS.map((product) => (
-        <div class="my-7 relative group duration-500 cursor-pointer group overflow-hidden text-gray-50 h-72 w-56 rounded-2xl hover:duration-700">
+        <div class="my-7 relative group duration-500 shadow-lg shadow-neutral-600 cursor-pointer group overflow-hidden text-gray-50 h-72 w-56 rounded-2xl hover:duration-700">
           <img
             class="w-56 h-72 bg-transparent text-gray-800  hover:scale-110 transition"
             src={product.img}
@@ -34,6 +34,7 @@ interface Props {}
         </div>
       ))
     }
+    <a class="mx-auto text-center bg-slate-400 px-3 py-1 text-white rounded-xl text-base"href="/">Ver Todos los Productos</a>
 </section>
 
 <style>
@@ -42,4 +43,5 @@ interface Props {}
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 20px;
   }
+
 </style>
