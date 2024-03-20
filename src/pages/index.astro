@@ -10,42 +10,36 @@ import OursProducts from '@/components/OursProducts.astro';
 import Testimonials from '@/components/Testimonials.astro';
 import Footer from '@/components/Footer.astro';
 import SectionMain from '@/components/SectionMain.astro';
+import WelcomePage from '@/components/WelcomePage.astro';
 ---
 
-<Layout title="ArtexAlex | Transforma Basura en Belleza: Creaciones Únicas con Metal y Madera Reciclados">
+<Layout title="ArtexAlex | Transforma Basura en Belleza: Creaciones Únicas con Metal y Madera Reciclados" transition:persist>
 	<main>
-		<Container>
-			<SectionMain/>
-		</Container>
-		<Container>
-			<Information/>
-		</Container>
-		<Container>
-			<Services/>
-		</Container>
+		<WelcomePage/>
 		
-		<Container>
-			<div class=" flex flex-col text-2xl">
-				<h3 class="text-center font-extrabold">Productos Destacados</h3>
-				<OursProducts/>
-			</div>
-		</Container>
-		<Container>
-			
-			<Video/>
-		</Container>
-		<Container>
-			<Testimonials/>
-		</Container>
-		<Container>
-			<Owner/>
-		</Container>
-		<Container>
-			<Adress/>
-		</Container>
+		<SectionMain/>
+		<Information/>
 		
-		<Container>
-			<Footer/>
-		</Container>
+		
+		
+		<Services/>
+		
+		
+		<div class=" flex flex-col text-2xl">
+			<h3 class="text-center font-extrabold">Productos Destacados</h3>
+			<OursProducts/>
+		</div>
+		
+		<Video/>
+		
+		<Testimonials/>
+		
+		<Owner/>
+		
+		<Adress/>
+		
+		
+		<Footer/>
+		
 	</main>
 </Layout>
