@@ -2,18 +2,19 @@
 import Container from "./Container.astro";
 ---
 
+<section class=" mx-auto mt-10">
 <Container>
-    <div class="flex flex-col text-center mx-auto mt-10">
-			
-    <h3 class="text-center font-extrabold text-2xl">Video de Demostración</h3>
-    <iframe
-      class="py-10 mx-auto"
-      width="560"
-      height="420"
-      src="https://www.youtube.com/embed/qNJHuxsbwgI?si=zAfgaEtOPg6MLZVn"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-    </div>
-  </Container>
+			<div class="flex flex-col text-center mx-auto">
+        <h3 class="text-center font-extrabold text-2xl">Video de Demostración</h3>
+        <iframe
+          class="py-10 mx-auto"
+          width="560"
+          height="420"
+          src="https://www.youtube.com/embed/qNJHuxsbwgI?si=zAfgaEtOPg6MLZVn"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </Container>
+  </section>
