@@ -1,5 +1,6 @@
 ---
 import {TESTIMONIALS} from "@/lib/testimonials.ts";
+import Container from "./Container.astro";
 interface Props {
   img?: string;
   name?: string;
@@ -10,32 +11,37 @@ interface Props {
 const { img, name, stars, text } = Astro.props;
 ---
 
-<section class="p-2 flex flex-col mx-auto">
-  <h2 class="text-2xl mb-7 font-extrabold text-center">Testimonios de nuestros clientes</h2>
-  <div
-    class="flex flex-row flex-wrap gap-6 mx-auto justify-center items-center w-full"
-  >
-  {
-      TESTIMONIALS.map((item) => (
-          <>
-          <div class="flex flex-row gap-10 mx-auto max-w-96">
-            <div class="flex flex-col justify-center items-center">
-              <img
-                class="size-20 rounded-full"
-                src={item.img}
-                alt={`imagen de ${item.name} para testimoniales`}
-              />
-              <p>{item.stars}</p>
-            </div>
-            <div class="bg-orange-300 p-5 rounded-2xl">
-              <h3 class="font-extrabold text-2xl">{item.name}</h3>
-              <p class="text-base">
-                {item.text}
-              </p>
-            </div>
-            </div>
-          </>
-        ))
-      }
-  </div>
+<section class="">
+  <Container>
+    <div class="flex flex-col mx-auto">
+
+      <h2 class="text-2xl mb-7 font-extrabold text-center">Testimonios de nuestros clientes</h2>
+      <div
+        class="flex flex-row flex-wrap gap-6 justify-center items-center w-full"
+      >
+      {
+          TESTIMONIALS.map((item) => (
+              <>
+              <div class="flex flex-row gap-10 mx-auto max-w-96">
+                <div class="flex flex-col justify-center items-center">
+                  <img
+                    class="size-20 rounded-full"
+                    src={item.img}
+                    alt={`imagen de ${item.name} para testimoniales`}
+                  />
+                  <p>{item.stars}</p>
+                </div>
+                <div class="bg-orange-300 p-5 rounded-2xl">
+                  <h3 class="font-extrabold text-2xl">{item.name}</h3>
+                  <p class="text-base">
+                    {item.text}
+                  </p>
+                </div>
+                </div>
+              </>
+            ))
+          }
+      </div>
+    </div>
+  </Container>
 </section>
