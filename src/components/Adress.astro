@@ -2,68 +2,62 @@
 import WhatsApp from "./icons/address/WhatsApp.astro";
 import MapSite from "./icons/address/Map.astro";
 import Container from "./Container.astro";
-import { map } from "astro/zod";
 ---
 
 <section class="mb-10">
   <Container>
-    <div class="flex flex-col gap-10 justify-center items-center mx-auto">
+    <div class="flex flex-col gap-10 justify-center items-center mx-auto ">
+
       <h2 class="text-2xl font-extrabold">Donde estamos ubicados</h2>
-      <p class="text-base md:text-lg mx-5 md:mx-20 text-center">
-        Visita nuestro local de manualidades en Muzo | Chiquinquirá - Boyacá.
-        También puedes escribirnos si tienes alguna duda con algún producto,
-        hacer pedidos especiales o necesitas asistencia en compras al por mayor.
-      </p>
-      <div class="flex flex-col md:flex-row gap-10 justify-center items-center">
-        <div class="flex flex-col justify-center gap-10">
-          <article class="text-center">
-            <h3 class="text-2xl font-extrabold">Muzo - Boyacá</h3>
-            <p>Cr. 4a</p>
-            <p>(+57) 313 240 5135</p>
-            <div
-              class="inline-flex rounded-lg flex-row border border-slate-500 px-2 py-1 gap-2"
-            >
-              <a href="/">
-                <WhatsApp class="size-7 hover:scale-110 transition" />
-              </a>
-              <a
-                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.8078703148431!2d-74.1018880304511!3d5.532624799652975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41ac9551e097fd%3A0xee8426bfc4bb5abf!2zQ2FycmVyYSA0wqosIE11em8sIEJveWFjw6E!5e0!3m2!1ses!2sco!4v1710877917062!5m2!1ses!2sco"
-                target="paginas"
-              >
-                <MapSite class="size-7 hover:scale-110 transition" />
-              </a>
-            </div>
-          </article>
-          <article class="text-center">
-            <h3 class="text-2xl font-extrabold">Chiquinquirá - Boyacá</h3>
-            <p>Cr. 4a</p>
-            <p>(+57) 313 240 5135</p>
-            <div
-              class="inline-flex rounded-lg flex-row border border-slate-500 px-2 py-1 gap-2"
-            >
-              <a href="/">
-                <WhatsApp class="size-7 hover:scale-110 transition" />
-              </a>
-              <a
-                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6562936622804!2d-73.82056602525445!3d5.617646894363346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41c9c8206e8f55%3A0xac3db80d1bea5f80!2zQ3JhLiAxMiAjMTMtMTYwLCBDaGlxdWlucXVpcsOhLCBCb3lhY8Oh!5e0!3m2!1ses!2sco!4v1710969405220!5m2!1ses!2sco"
-                target="paginas"
-              >
-                <MapSite class="size-7 hover:scale-110 transition iconM" />
-              </a>
-            </div>
-          </article>
-        </div>
-        <aside class="iframes">
-          <iframe
-            id="mapa"
-            name="paginas"
-            class="frame1 animate-fade-in border-red-500 shadow-2xl shadow-slate-950 rounded-xl w-[400px] h-[300px] md:w-[550px] md:h-[400px] aspect-[16:9]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.8078703148431!2d-74.1018880304511!3d5.532624799652975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41ac9551e097fd%3A0xee8426bfc4bb5abf!2zQ2FycmVyYSA0wqosIE11em8sIEJveWFjw6E!5e0!3m2!1ses!2sco!4v1710877917062!5m2!1ses!2sco"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </aside>
+    <p class="text-base md:text-lg mx-5 md:mx-20 text-center">
+      Visita nuestro local de manualidades en Muzo | Chiquinquirá - Boyacá. También
+      puedes escribirnos si tienes alguna duda con algún producto, hacer pedidos
+      especiales o necesitas asistencia en compras al por mayor.
+    </p>
+    <div class="flex flex-col md:flex-row gap-10 justify-center items-center">
+      <div class="flex flex-col justify-center gap-10">
+        <article class="text-center">
+          <h3 class="text-2xl font-extrabold">Muzo - Boyacá</h3>
+          <p>Cr. 4a</p>
+          <p>(+57) 313 240 5135</p>
+          <div
+            class="inline-flex rounded-lg flex-row border border-slate-500 px-2 py-1 gap-2"
+          >
+            <a href="/">
+              <WhatsApp class="size-7 hover:scale-110 transition " />
+            </a>
+            <a href="/">
+              <MapSite class="size-7 hover:scale-110 transition " />
+            </a>
+          </div>
+        </article>
+        <article class="text-center">
+          <h3 class="text-2xl font-extrabold">Chiquinquirá - Boyacá</h3>
+          <p>Cr. 4a</p>
+          <p>(+57) 313 240 5135</p>
+          <div
+            class="inline-flex rounded-lg flex-row border border-slate-500 px-2 py-1 gap-2"
+          >
+            <a href="/">
+              <WhatsApp class="size-7 hover:scale-110 transition" />
+            </a>
+            <a href="/">
+              <MapSite class="size-7 hover:scale-110 transition" />
+            </a>
+          </div>
+        </article>
       </div>
+      <aside>
+        <iframe
+          class="flex border-red-500 shadow-2xl shadow-slate-950 rounded-xl w-[400px] h-[300px] md:w-[550px] md:h-[400px] aspect-[16:9]"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.8078703148431!2d-74.1018880304511!3d5.532624799652975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e41ac9551e097fd%3A0xee8426bfc4bb5abf!2zQ2FycmVyYSA0wqosIE11em8sIEJveWFjw6E!5e0!3m2!1ses!2sco!4v1710877917062!5m2!1ses!2sco"
+          
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </aside>
+    </div>
     </div>
   </Container>
 </section>

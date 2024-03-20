@@ -3,17 +3,16 @@ import Header from '../components/Header.astro';
 
 interface Props {
 	title: string;
-	description: string;
 }
 
-const { title, description } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/Icon.ico"/>
 		<title>{title}</title>
@@ -29,10 +28,10 @@ const { title, description } = Astro.props;
 <style is:global>
 	@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
 	:root {
-		--letter: 'Caviar Dreams', system-ui, sans-serif;
+		
 	}
 	html {
-		font-family: var(--letter);
+		font-family: 'Caviar Dreams', system-ui, sans-serif;
 		background: #fff;
 	}
 	
