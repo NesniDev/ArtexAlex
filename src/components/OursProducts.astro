@@ -13,12 +13,12 @@ interface Props {}
         PRODUCTS.map((product) => (
           <div class="mt-7 relative group duration-500 shadow-lg shadow-neutral-600 cursor-pointer group overflow-hidden text-gray-50 h-76 w-full rounded-2xl hover:duration-700">
             <img
-              class="w-full h-64 bg-transparent text-gray-800  hover:scale-110 transition"
+              class="w-full h-80 bg-transparent text-gray-800  hover:scale-110 transition"
               src={product.img}
               alt={`imagen del producto ${product.name}`}
             />
             <div class="absolute bg-gray-50 -bottom-24 sm:-bottom-24 md:-bottom-24 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-              <div class="flex flex-row gap-6">
+              <div class="flex flex-row gap-6 justify-between">
                 <div class="flex flex-col">
                   <span class="uppercase font-extrabold text-yellow-700 text-xs pb-2">
                     {product.name}
@@ -27,7 +27,7 @@ interface Props {}
                     {product.materials}
                   </span>
                 </div>
-                <div class="flex flex-row justify-end items-baseline">
+                <div class="flex justify-start items-start">
                   <span class="text-gray-800 text-xs font-extrabold flex-grow justify-items-end text-end">
                     ${product.price}
                   </span>
