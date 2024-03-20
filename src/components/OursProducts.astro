@@ -18,7 +18,7 @@ interface Props {}
               alt={`imagen del producto ${product.name}`}
             />
             <div class="absolute bg-gray-50 -bottom-24 sm:-bottom-24 md:-bottom-24 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-              <div class="flex flex-row gap-6">
+              <div class="flex flex-row gap-6 justify-between mb-1">
                 <div class="flex flex-col">
                   <span class="uppercase font-extrabold text-yellow-700 text-xs pb-2">
                     {product.name}
@@ -27,7 +27,7 @@ interface Props {}
                     {product.materials}
                   </span>
                 </div>
-                <div class="flex flex-row justify-end items-baseline">
+                <div class="flex flex-row justify-start items-start">
                   <span class="text-gray-800 text-xs font-extrabold flex-grow justify-items-end text-end">
                     ${product.price}
                   </span>
