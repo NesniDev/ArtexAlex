@@ -4,15 +4,18 @@ import Container from "./Container.astro";
 
 <section class="mb-28">
   <Container>
-    <div class=" mt-0 grid grid-cols-5 items-center h-full">
-      <div class="col-span-3">
-        <h2 class="text-4xl mb-5 font-extrabold">Artesanías a Partir de Desechos de Metal y Madera</h2>
-        <p class="text-lg">
-          Encuentra en nuestra tienda desde canastos de fique, productos en palma de iraca, hasta mochilas tejidas, accesorios artesanales y mucho más. Encuentra las mejores artesanías de Colombia en el Atlántico, hechas con técnicas tradicionales.
+    <div class="mt-0 grid grid-cols-1 md:grid-cols-5 items-center h-full">
+      <div class="text-center md:text-left col-span-1 md:col-span-3">
+        <h2 class="text-5xl md:text-8xl mb-5 font-extrabold">Artesanías ArtexAlex</h2>
+        <p class="text-xl">
+          Encuentra en nuestra tienda desde canastos de fique, productos en
+          palma de iraca, hasta mochilas tejidas, accesorios artesanales y mucho
+          más. Encuentra las mejores artesanías de Colombia en Muzo Boyacá,
+          hechas con técnicas tradicionales.
         </p>
       </div>
-      <picture class="col-span-2  mx-auto">
-        <img class="w-80" src="/imgMain.avif" alt="">
+      <picture class="col-span-1 md:col-span-2 mx-auto mt-10 md:mt-0">
+        <img class="w-56 md:w-80" decoding="async" loading="lazy" src="/imgMain.avif" alt="" />
       </picture>
     </div>
   </Container>
