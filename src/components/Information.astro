@@ -1,22 +1,33 @@
-<section class="relative bg-gradient-to-t from-slate-900">
-  <img
-    class="w-screen h-80 object-center object-cover bg-no-repeat opacity-60"
-    src="/img/fondo.avif"
-    alt="Imagen de fondo"
-  />
-  <div
-    class="absolute top-0 left-0 bottom-0 right-0
-     flex flex-col justify-center items-center text-center text-white"
-  >
-    <h2 class="mb-5 text-3xl mx-80 font-extrabold">
-      Artesanías a Partir de Desechos de Metal y Madera
-    </h2>
-    <p class="px-56 text-pretty">
-      Transformamos el desafío de los desechos en una oportunidad para la
-      sostenibilidad. Desde nuestro compromiso con la investigación y la
-      extensión, hasta nuestra pasión por la innovación y la transferencia de
-      conocimiento, estamos impulsando un cambio significativo en los sectores
-      del metal y la madera. 
-    </p>
-  </div>
+---
+import Container from "./Container.astro";
+---
+
+<section class="image bg-gradient-to-t from-slate-900 py-20">
+  <Container>
+    <!-- <div class="image"></div> -->
+    <div
+      class="
+       flex flex-col justify-center items-center text-center text-white"
+    >
+      <h2 class="mb-5 text-3xl mx-56 font-extrabold">
+        Artesanías a Partir de Desechos de Metal y Madera
+      </h2>
+      <p class="px-48 text-pretty">
+        Transformamos el desafío de los desechos en una oportunidad para la
+        sostenibilidad. Desde nuestro compromiso con la investigación y la
+        extensión, hasta nuestra pasión por la innovación y la transferencia de
+        conocimiento, estamos impulsando un cambio significativo en los sectores
+        del metal y la madera. 
+      </p>
+    </div>
+  </Container>
 </section>
+
+<style>
+  .image{
+    background-image:  linear-gradient(to bottom, #0e0e0e99 25%, #27282b66 100%), url(/img/fondo.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
