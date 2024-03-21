@@ -3,9 +3,11 @@ import Recycle from "@/components/icons/services/Recycle.astro";
 import Labour from "@/components/icons/services/Labour.astro";
 import Container from "./Container.astro";
 import Products from "@/components/icons/services/Products.astro";
+
+const {id } = Astro.props
 ---
 
-<section class="py-16 ">
+<section class="py-16" id={id}>
   <Container>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-9 md:mx-0 justify-center items-start font-extrabold"
