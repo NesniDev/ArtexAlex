@@ -1,41 +1,74 @@
 ---
-
+import Container from "./Container.astro";
 ---
 
 <header
-
-  class="flex w-full mx-auto max-w-[70rem] justify-between items-center py-8 md:py-8"
+  class="flex justify-between items-center py-8 md:py-2 sticky top-0 left-0"
 >
-  <a href="/">
-    <img class="w-44" decoding="async" loading="lazy" src="/img/ArtexAlex.webp" alt="Logo de ArtexAlex" />
-  </a>
-  <nav class="hidden md:block">
-    <ul class="flex gap-3 [&>li>a]:font-extrabold">
-      <li>
-        <a
-          class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
-          href="/">Inicio</a>
-      </li>
-      <li>
-        <a
-          class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
-          href="/#productos">Productos</a>
-      </li>
-      <li>
-        <a
-          class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
-          href="/#servicios">Servicios</a>
-      </li>
-      <li>
-        <a
-          class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
-          href="/#contacto">Contacto</a>
-      </li>
-      <li>
-        <a
-          class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
-          href="/#ubicacion">Ubicación</a>
-      </li>
-    </ul>
-  </nav>
+  <Container>
+    <a href="/">
+      <img
+        class="w-40"
+        decoding="async"
+        loading="lazy"
+        src="/img/ArtexAlex.webp"
+        alt="Logo de ArtexAlex"
+      />
+    </a>
+    <nav class="hidden md:block">
+      <ul class="flex gap-3 [&>li>a]:font-extrabold">
+        <li>
+          <a
+            class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
+            href="/">Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
+            href="/#productos">Productos</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
+            href="/#servicios">Servicios</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
+            href="/#contacto">Contacto</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:bg-black/50 transition p-2 inline-block hover:-translate-y-[3px] hover:scale-110 rounded-lg hover:text-white"
+            href="/#ubicacion">Ubicación</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </Container>
 </header>
+
+<style>
+  header {
+    transition: animation .2s ease-in;
+    animation: blur-header linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 10px;
+  }
+  
+  @keyframes blur-header {
+    1%{
+      color: white
+    }
+    100% {
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      color: white;
+    }
+  }
+</style>
