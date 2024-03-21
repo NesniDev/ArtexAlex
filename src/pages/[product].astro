@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { PRODUCTS } from "../lib/products";
+import WhatsApp from "../components/icons/SocialMedia/WhatsApp.astro";
+const { product } = Astro.params;
+
+const infoProduct = PRODUCTS.find((p) => p.id == product);
+
+if (!infoProduct) {
+  return Astro.redirect("/404");
+}
+---
+
+<Layout title={`Producto - ${infoProduct.name}`} description="">
+  <main class="m-auto max-w-4xl">
+    <section class="grid grid-cols-[550px_1fr] place-content-center gap-10">
+      <picture class="brightness-75 transition mx-auto shadow-xl rounded-lg hover:scale-105 z-99" >
+        <img
+        class="w-[500px] cursor-move "
+          src={infoProduct.img}
+          alt={`Imagen del producto ${infoProduct.name}`}
+          id="img"
+        />
+      </picture>
+      <aside class="flex flex-col gap-3">
+        <img  class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl" src={infoProduct.img} alt="">
+        <img class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"  src={infoProduct.img} alt="">
+        <img  class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl" src={infoProduct.img} alt="">
+      </aside>
+      <footer class="col-span-2 ">
+        <div
+          class="select-none flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-8 p-7 hover:scale-105 hover:border-green-400 transition border-gray-700"
+        >
+          <h1 class="font-extrabold text-5xl">{infoProduct.name}</h1>
+          <p class="text-xl">{infoProduct.materials}</p>
+          <p class="text-base">{infoProduct.description}</p>
+          <div
+            class="inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg"
+          >
+            <WhatsApp class="size-5" />
+            <a href="/">${infoProduct.price}</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  #img {
+    mask-image: linear-gradient(black 80%, red 20%);
+  }
+</style>
