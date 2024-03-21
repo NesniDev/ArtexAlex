@@ -28,7 +28,7 @@ export const PRODUCTS = [
         description: "Manualidad hecha a base de metal y de hierro que tgavskdahadjkdkj nakjd  dj dfkj fjdf jdfbjdfbfbf "
     },
     {
-        img: "/imgProducts/mesa.avif",
+        img: "/imgProducts/perro.avif",
         name: "Mesa 4 Puestos",
         materials: "Madera, discos bicicleta",
         price: "500.000",
