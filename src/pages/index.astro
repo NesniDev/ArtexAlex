@@ -1,30 +1,33 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Information from '@/components/Information.astro';
-import Container from '@/components/Container.astro';
-import Services from '@/components/Services.astro';
-import Video from '@/components/Video.astro';
-import Adress from '@/components/Adress.astro';
-import Owner from '@/components/Owner.astro';
-import OursProducts from '@/components/OursProducts.astro';
-import Testimonials from '@/components/Testimonials.astro';
-import Footer from '@/components/Footer.astro';
-import SectionMain from '@/components/SectionMain.astro';
+import Layout from "@/layouts/Layout.astro";
+import Information from "@/components/Information.astro";
+import Container from "@/components/Container.astro";
+import Services from "@/components/Services.astro";
+import Video from "@/components/Video.astro";
+import Adress from "@/components/Adress.astro";
+import Owner from "@/components/Owner.astro";
+import OursProducts from "@/components/OursProducts.astro";
+import Testimonials from "@/components/Testimonials.astro";
+import Footer from "@/components/Footer.astro";
+import SectionMain from "@/components/SectionMain.astro";
 ---
 
-<Layout title="ArtexAlex | Transforma Basura en Belleza: Creaciones Únicas con Metal y Madera Reciclados" transition:persist>
-	<main>
-		<SectionMain/>
-		<Information/>
-		<Services id="servicios"/>
-		<div class=" flex flex-col text-2xl" id="productos">
-			<h3 class="text-center font-extrabold">Productos Destacados</h3>
-			<OursProducts/>
-		</div>
-		<Video/>
-		<Testimonials/>
-		<Owner id="propietario"/>	
-		<Adress id="ubicacion"/>
-		<Footer/>
-	</main>
+<Layout
+  title="ArtexAlex | Transforma Basura en Belleza: Creaciones Únicas con Metal y Madera Reciclados"
+  transition:persist
+  description=""
+>
+  <main>
+    <SectionMain />
+    <Information />
+    <Services id="servicios" />
+    <div class="flex flex-col text-2xl" id="productos">
+      <h3 class="text-center font-extrabold">Productos Destacados</h3>
+      <OursProducts />
+    </div>
+    <Video />
+    <Testimonials />
+    <Owner id="propietario" />
+    <Adress id="ubicacion" />
+  </main>
 </Layout>
