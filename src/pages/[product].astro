@@ -12,28 +12,50 @@ if (!infoProduct) {
 ---
 
 <Layout title={`Producto - ${infoProduct.name}`} description="">
-  <main class="m-auto max-w-4xl">
-    <section class="grid grid-cols-[550px_1fr] place-content-center gap-10">
-      <picture class="brightness-75 transition mx-auto shadow-xl rounded-lg hover:scale-105 z-99" >
-        <img
-        class="w-[500px] cursor-move "
-          src={infoProduct.img}
-          alt={`Imagen del producto ${infoProduct.name}`}
-          id="img"
-        />
-      </picture>
-      <aside class="flex flex-col gap-3">
-        <img  class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl" src={infoProduct.img} alt="">
-        <img class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"  src={infoProduct.img} alt="">
-        <img  class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl" src={infoProduct.img} alt="">
-      </aside>
-      <footer class="col-span-2 ">
+  <main class="m-auto max-w-5xl mb-14">
+    <section
+      class="grid grid-cols-[1fr_1fr_350px] place-items-center place-content-center gap-32"
+    >
+      <div class="col-span-2">
         <div
-          class="select-none flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-8 p-7 hover:scale-105 hover:border-green-400 transition border-gray-700"
+          class="my-5 col-span-1 overflow-hidden rounded-lg border-2 shadow-inner shadow-slate-800"
         >
-          <h1 class="font-extrabold text-5xl">{infoProduct.name}</h1>
+          <img
+            class="w-full h-auto cursor-move transition mx-auto z-99 hover:scale-105"
+            decoding="async"
+            src={infoProduct.img}
+            alt={`Imagen del producto ${infoProduct.name}`}
+            id="img"
+          />
+        </div>
+        <footer class="flex justify-center col-span-2 gap-3">
+          <img
+            class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"
+            src={infoProduct.img}
+            alt=""
+          />
+          <img
+            class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"
+            src={infoProduct.img}
+            alt=""
+          />
+          <img
+            class="w-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"
+            src={infoProduct.img}
+            alt=""
+          />
+        </footer>
+      </div>
+      <aside class="col-span-1 flex flex-col gap-2">
+        <div
+          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-300"
+        >
+          <h1 class="font-extrabold text-5xl text-center">
+            {infoProduct.name}
+          </h1>
           <p class="text-xl">{infoProduct.materials}</p>
           <p class="text-base">{infoProduct.description}</p>
+          <p class="text-left"><span class="text-green-500 font-extrabold text-left">Envío gratis</span> a todo el país.</p>
           <div
             class="inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg"
           >
@@ -41,7 +63,23 @@ if (!infoProduct) {
             <a href="/">${infoProduct.price}</a>
           </div>
         </div>
-      </footer>
+        <div
+          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-300"
+        >
+          <h2 class="font-extrabold text-2xl text-center">
+            Medios de Pago
+          </h2>
+          
+          <div
+            class="flex justify-center items-center gap-5"
+          >
+            <img class="size-12 cursor-pointer hover:scale-105 transition" decoding="async" loading="lazy" src="/pagos/nequi.avif" alt="Pago por nequi" title="Pago por nequi">
+            <img class="size-12 cursor-pointer hover:scale-105 transition" decoding="async" loading="lazy" src="/pagos/bancolombia.avif" alt="Pago por Bancolombia" title="Pago por Bancolombia">
+            <img class="size-12 cursor-pointer hover:scale-105 transition" decoding="async" loading="lazy" src="/pagos/efectivo.avif" alt="Pago en enfectivo" title="Pago en enfectivo">
+          </div>
+        </div>
+        
+      </aside>
     </section>
   </main>
 </Layout>
