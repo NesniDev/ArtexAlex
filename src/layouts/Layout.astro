@@ -30,8 +30,10 @@ const { title, description } = Astro.props;
 </html>
 <style is:global>
 	@import url('https://fonts.cdnfonts.com/css/caviar-dreams');
+	@import url('https://fonts.cdnfonts.com/css/atomic');
 	:root {
-		
+		--letterCaviar: 'Caviar Dreams', system-ui, sans-serif;
+		--letterAtomic: 'Atomic', system-ui, sans-serif;
 	}
 	html {
 		font-family: 'Caviar Dreams', system-ui, sans-serif;
@@ -39,4 +41,7 @@ const { title, description } = Astro.props;
 		scroll-behavior: smooth;
 	}
 	
+	h6, h3, h4, h5{
+		font-family: var(--letterAtomic);
+	}
 </style>

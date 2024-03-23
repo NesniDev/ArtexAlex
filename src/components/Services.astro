@@ -7,7 +7,7 @@ import Products from "@/components/icons/services/Products.astro";
 const {id } = Astro.props
 ---
 
-<section class="py-16" id={id}>
+<section class="py-16 " id={id}>
   <Container>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-9 md:mx-0 justify-center items-start font-extrabold"
@@ -19,7 +19,7 @@ const {id } = Astro.props
         >
           <Recycle class="size-10 rounded-full" />
         </a>
-        <h6 class="mb-3 text-xl text-center">Reutilización de Materiales</h6>
+        <h6 class="mb-3 text-4xl font-extralight text-center">Reutilización de Materiales</h6>
         <p class="font-extralight text-sm text-center">
           Nuestro enfoque no solo transforma desechos en obras de arte, sino que
           también contribuye al crecimiento sostenible de la comunidad y
@@ -33,7 +33,7 @@ const {id } = Astro.props
         >
           <Products class="size-10 rounded-full" />
         </a>
-        <h6 class="mb-3 text-xl text-center">
+        <h6 class="mb-3 text-4xl font-extralight text-center">
           Productos de Excelente Calidad
         </h6>
         <p class="font-extralight text-sm text-center">
@@ -50,7 +50,7 @@ const {id } = Astro.props
         >
           <Labour class="size-10 rounded-full" />
         </a>
-        <h6 class="mb-3 text-xl text-center">Mano de Obra Creativa</h6>
+        <h6 class="mb-3 text-4xl font-extralight text-center">Mano de Obra Creativa</h6>
         <p class="font-extralight text-sm text-center">
           En el corazón de cada creación hay una chispa de creatividad que
           enciende la llama de la imaginación. Nuestra mano de obra no se limita
@@ -60,3 +60,9 @@ const {id } = Astro.props
     </div>
   </Container>
 </section>
+
+<style>
+  section {
+    /* font-family: var(--letterAtomic); */
+  }
+</style>
