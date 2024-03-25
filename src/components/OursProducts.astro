@@ -12,32 +12,33 @@ const { id } = Astro.props;
     >
       {
         PRODUCTS.map((product) => (
-          <article class="hover:contrast-150 mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden text-gray-50 h-72 w-full rounded-2xl hover:duration-700">
+          
+          <article class="mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden h-72 w-full rounded-2xl hover:duration-700">
             <a href={`/${product.id}`}>
-              <div class="bg-blend-lighten ease-in bg-gradient-to-l from-zinc-800 to-transparent hover:scale-105 transition">
+              <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
                 <img
                   class="w-full h-64"
                   src={product.img}
                   alt={`imagen del producto ${product.name}`}
                 />
               </div>
-              <div class="absolute bg-gradient-to-t from-slate-200 to-zinc-500 -bottom-24 sm:-bottom-24 md:-bottom-24 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+              <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-24 sm:-bottom-24 md:-bottom-[100px] w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
                 <div class="flex flex-row gap-6 justify-between mb-1">
                   <div class="flex flex-col">
-                    <span class="uppercase font-extrabold text-slate-100 text-xs pb-2">
+                    <span class="uppercase font-extrabold text-white text-xs pb-2">
                       {product.name}
                     </span>
-                    <span class="text-red-400/55 font-bold text-xs">
+                    <span class="text-red-400/80 font-bold text-xs">
                       {product.materials}
                     </span>
                   </div>
                   <div class="flex flex-row justify-start items-start">
-                    <span class="text-yellow-500 text-xs font-extrabold justify-items-end text-end">
-                      ${product.price}
+                    <span class="text-green-500 text-xs font-extrabold justify-items-end text-end">
+                      $ {product.price}
                     </span>
                   </div>
                 </div>
-                <p class="text-neutral-800 font-medium text-sm">
+                <p class="text-neutral-300 text-xs">
                   {product.description}
                 </p>
               </div>
@@ -49,7 +50,7 @@ const { id } = Astro.props;
   </Container>
   <a
     class="mx-auto text-center text-base mt-10 bg-slate-600 hover:bg-yellow-200 transition hover:text-[#012029] text-white font-extrabold px-3 py-1 rounded-lg inline-block"
-    href="/">Ver Todos los Productos</a
+    href="/AllProducts">Ver Todos los Productos</a
   >
 </section>
 
@@ -59,4 +60,8 @@ const { id } = Astro.props;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 20px;
   }
+  article:hover .img{
+        transform: scale(1.05);
+        filter: saturate(1.5);
+    }
 </style>
