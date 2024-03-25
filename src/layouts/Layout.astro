@@ -1,6 +1,7 @@
 ---
 import Footer from '@/components/Footer.astro';
 import Header from '../components/Header.astro';
+import Arrow from '@/components/icons/others/arrow.astro';
 
 interface Props {
 	title: string;
@@ -19,13 +20,16 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/Icon.ico"/>
 		<title>{title}</title>
 	</head>
-	<body class="relative">
+	<body class="relative" id="inicio">
 		<div class="fixed left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-yellow-400 opacity-20 blur-[100px]">
 		</div>
 		<!-- <div class="fixed top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(253,208,105,0.5),rgba(255,255,255,0))]"></div> -->
 		<Header/>
 		<slot />
 		<Footer/>
+		<a href="#inicio" class="vi fixed right-2 bottom-2 bg-yellow-400 rounded-full p-2 text-black transition hover:scale-110 hover:bg-yellow-100">
+			<Arrow class="size-5"/> 
+		</a>
 	</body>
 </html>
 <style is:global>
@@ -43,5 +47,20 @@ const { title, description } = Astro.props;
 	
 	h6, h3, h4, h5{
 		font-family: var(--letterAtomic);
+	}
+	.vi{
+		transition: animation .2s ease-in-out;
+		animation: inicio linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 10px;
+	}
+
+	@keyframes inicio {
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
 	}
 </style>
