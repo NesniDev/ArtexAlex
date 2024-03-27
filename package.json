@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^5.2.0",
     "@astrojs/tailwind": "^5.1.0",
     "@midudev/tailwind-animations": "^0.0.7",
     "astro": "^4.5.4",
