@@ -1,63 +1,75 @@
 ---
-import { ALL_PRODUCTS } from "@/lib/Allproducts.ts";
+import { PRODUCTS } from "@/lib/products.ts";
 import Container from "@/components/Container.astro";
 import Layout from "../layouts/Layout.astro"
 const { id } = Astro.props;
----
 
 ---
----
 
-<Layout title="" description="">
+
+
+<Layout title="" description="" transition:persist>
     
-    <section class="flex flex-col" id={id}>
-      <h2 class="text-center font-extrabold">Todos Los Productos</h2>
-      <Container>
-        <div
-          class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
-        >
-          {
-            ALL_PRODUCTS.map((product) => (
-              <article class="mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden text-gray-50 h-72 w-full rounded-2xl hover:duration-700">
-                <a href={`/${product.id}`}>
-                  <div class=" ease-in bg-gradient-to-l from-zinc-500 to-transparent transition img">
-                    <img
-                      class="w-full h-64"
-                      src={product.img}
-                      alt={`imagen del producto ${product.name}`}
-                    />
-                  </div>
-                  <div class="absolute bg-gradient-to-t from-gray-400 to-gray-200 -bottom-24 sm:-bottom-24 md:-bottom-24 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-                    <div class="flex flex-row gap-6 justify-between mb-1">
-                      <div class="flex flex-col">
-                        <span class="uppercase font-extrabold text-slate-700 text-xs pb-2">
-                          {product.name}
-                        </span>
-                        <span class="text-red-400/55 font-bold text-xs">
-                          {product.materials}
-                        </span>
-                      </div>
-                      <div class="flex flex-row justify-start items-start">
-                        <span class="text-yellow-500 text-xs font-extrabold justify-items-end text-end">
-                          ${product.price}
-                        </span>
-                      </div>
+  <section class="flex flex-col" id={id}>
+    <h2 class="text-center font-extrabold">Productos Destacados</h2>
+    <Container>
+      <div
+        class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
+      >
+        {
+          PRODUCTS.map((product) => (
+            
+            <article class="mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden h-72 w-full rounded-2xl hover:duration-700">
+              <a href={`/${product.id}`}>
+                <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
+                  <img
+                    class="w-full h-64"
+                    src={product.img}
+                    alt={`imagen del producto ${product.name}`}
+                  />
+                </div>
+                <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-24 sm:-bottom-24 md:-bottom-[100px] w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+                  <div class="flex flex-row gap-6 justify-between mb-1">
+                    <div class="flex flex-col">
+                      <span class="uppercase font-extrabold text-white text-xs pb-2">
+                        {product.name}
+                      </span>
+                      <span class="text-red-400/80 font-bold text-xs">
+                        {product.materials}
+                      </span>
                     </div>
-                    <p class="text-neutral-800 text-xs">
-                      {product.description}
-                    </p>
+                    <div class="flex flex-row justify-start items-start">
+                      <span class="text-green-500 text-xs font-extrabold justify-items-end text-end">
+                        $ {product.price}
+                      </span>
+                    </div>
                   </div>
-                  </a>
-              </article>
-            ))
-          }
-        </div>
-      </Container>
+                  <p class="text-neutral-300 text-xs">
+                    {product.description}
+                  </p>
+                </div>
+                </a>
+            </article>
+          ))
+        }
+      </div>
+    </Container>
+    <a
+      class="mx-auto text-center text-base mt-10 bg-slate-600 hover:bg-yellow-200 transition hover:text-[#012029] text-white font-extrabold px-3 py-1 rounded-lg inline-block"
+      href="/AllProducts">Ver Todos los Productos</a
+    >
+  </section>
 
-    </section>
+
 </Layout>
 <style>
-    article:hover .img{
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 20px;
+  }
+  article:hover .img{
         transform: scale(1.05);
+        filter: saturate(1.5);
     }
 </style>

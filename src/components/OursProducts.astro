@@ -10,40 +10,41 @@ const { id } = Astro.props;
     <div
       class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
     >
-      {
-        PRODUCTS.map((product) => (
+    {
+        PRODUCTS.slice(0,3).map((product) => (
           
-          <article class="mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden h-72 w-full rounded-2xl hover:duration-700">
-            <a href={`/${product.id}`}>
-              <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
-                <img
-                  class="w-full h-64"
-                  src={product.img}
-                  alt={`imagen del producto ${product.name}`}
-                />
-              </div>
-              <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-24 sm:-bottom-24 md:-bottom-[100px] w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-                <div class="flex flex-row gap-6 justify-between mb-1">
-                  <div class="flex flex-col">
-                    <span class="uppercase font-extrabold text-white text-xs pb-2">
-                      {product.name}
-                    </span>
-                    <span class="text-red-400/80 font-bold text-xs">
-                      {product.materials}
-                    </span>
-                  </div>
-                  <div class="flex flex-row justify-start items-start">
-                    <span class="text-green-500 text-xs font-extrabold justify-items-end text-end">
-                      $ {product.price}
-                    </span>
-                  </div>
+
+            <article class="mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden h-72 w-full rounded-2xl hover:duration-700">
+              <a href={`/${product.id}`}>
+                <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
+                  <img
+                    class="w-full h-64"
+                    src={product.img}
+                    alt={`imagen del producto ${product.name}`}
+                  />
                 </div>
-                <p class="text-neutral-300 text-xs">
-                  {product.description}
-                </p>
-              </div>
-              </a>
-          </article>
+                <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-24 sm:-bottom-24 md:-bottom-[100px] w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+                  <div class="flex flex-row gap-6 justify-between mb-1">
+                    <div class="flex flex-col">
+                      <span class="uppercase font-extrabold text-white text-xs pb-2">
+                        {product.name}
+                      </span>
+                      <span class="text-red-400/80 font-bold text-xs">
+                        {product.materials}
+                      </span>
+                    </div>
+                    <div class="flex flex-row justify-start items-start">
+                      <span class="text-green-500 text-xs font-extrabold justify-items-end text-end">
+                        $ {product.price}
+                      </span>
+                    </div>
+                  </div>
+                  <p class="text-neutral-300 text-xs">
+                    {product.description}
+                  </p>
+                </div>
+                </a>
+            </article>
         ))
       }
     </div>

@@ -2,6 +2,7 @@
 import Footer from '@/components/Footer.astro';
 import Header from '../components/Header.astro';
 import Arrow from '@/components/icons/others/arrow.astro';
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
 
 interface Props {
 	title: string;
@@ -30,6 +31,7 @@ const { title, description } = Astro.props;
 		<a href="#inicio" class="vi fixed right-2 bottom-2 bg-yellow-400 rounded-full p-2 text-black transition hover:scale-110 hover:bg-yellow-100">
 			<Arrow class="size-5"/> 
 		</a>
+		<!-- <ViewTransitions/> -->
 	</body>
 </html>
 <style is:global>

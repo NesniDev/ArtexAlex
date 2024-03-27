@@ -30,19 +30,22 @@ if (!infoProduct) {
         </div>
         <footer class="flex justify-center col-span-2 gap-3">
           <img
-            class="w-48 h-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"
+            class="w-48 h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
             src={infoProduct.img}
             alt=""
+            id="thumbnail"
           />
           <img
-            class="w-48 h-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"
+            class="w-48 h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
             src={infoProduct.img}
             alt=""
+            id="thumbnail"
           />
           <img
-            class="w-48 h-48 cursor-pointer brightness-75 shadow-lg shadow-black rounded-2xl"
+            class="w-48 h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
             src={infoProduct.img}
             alt=""
+            id="thumbnail"
           />
         </footer>
       </div>
@@ -57,7 +60,7 @@ if (!infoProduct) {
           <p class="text-base">{infoProduct.description}</p>
           <p class="text-left"><span class="text-green-500 font-extrabold text-left">Envío gratis</span> a todo el país.</p>
           <div
-            class="inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg"
+            class="inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg hover:scale-105 hover:bg-slate-400 transition"
           >
             <WhatsApp class="size-5" />
             <a href="/">${infoProduct.price}</a>
@@ -88,4 +91,28 @@ if (!infoProduct) {
   #img {
     mask-image: linear-gradient(black 80%, red 20%);
   }
+
+  .active{
+    opacity: 1;
+    filter: brightness(1.2);
+    box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6 );
+  }
 </style>
+
+<script>
+
+      const main_img = document.getElementById('img');
+      const thumbnail = document.querySelectorAll('#thumbnail');
+
+      thumbnail.forEach(thumb => {
+        thumb.addEventListener('mouseover', () => {
+          thumbnail.forEach(thumb => {
+            thumb.classList.remove('active');
+          });
+
+          // Agregar la clase 'active' a la miniatura que se hizo clic
+          thumb.classList.add('active');
+          main_img.setAttribute("src", thumb.getAttribute("src"));
+        });
+    });
+</script>
