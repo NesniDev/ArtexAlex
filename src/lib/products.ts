@@ -7,7 +7,6 @@ export const PRODUCTS = [
         price: "90.000",
         description: "Este diseño único resalta tanto la creatividad como la funcionalidad, ofreciendo una alternativa innovadora en la construcción de vehículos."
     },
-    
     {
         id: "Banca-2-llantas",
         img: "/imgProducts/banca.avif",
@@ -23,8 +22,7 @@ export const PRODUCTS = [
         materials: "Metal y Varillas",
         price: "85.000",
         description: "Cada detalle, desde las curvas suaves hasta los ángulos precisos, irradia vida y personalidad, convirtiéndose en una pieza de conversación destacada en cualquier espacio."
-    },
-    
+    }, 
     {
         id: "Mesa-4-Puestos",
         img: "/imgProducts/mesa.avif",
@@ -42,8 +40,6 @@ export const PRODUCTS = [
         description: "La estructura resistente y acolchado suave de la silla garantizan un descanso óptimo, mientras que su mecanismo ajustable permite adaptarse a las preferencias individuales.",
         descriptionComplete: "lore "
     },
-    
-   
     {
         id: "Caballo",
         img: "/imgProducts/caballo.avif",

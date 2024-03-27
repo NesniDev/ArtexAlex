@@ -19,6 +19,8 @@ const { id } = Astro.props;
                 <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
                   <img
                     class="w-full h-64"
+                    decoding="async"
+                    loading="lazy"
                     src={product.img}
                     alt={`imagen del producto ${product.name}`}
                   />
