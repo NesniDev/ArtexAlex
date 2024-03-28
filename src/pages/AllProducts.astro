@@ -8,7 +8,7 @@ const { id } = Astro.props;
 
 
 
-<Layout title="" description="" transition:persist>
+<Layout title="" description="">
     
   <section class="flex flex-col" id={id}>
     <h2 class="text-center font-extrabold">Productos Destacados</h2>
@@ -23,9 +23,12 @@ const { id } = Astro.props;
               <a href={`/${product.id}`}>
                 <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
                   <img
-                    class="w-full h-64"
+                  transition:name="moto"
+                    class="w-full h-64 transition"
                     src={product.img}
                     alt={`imagen del producto ${product.name}`}
+                    decoding="async"
+                    loading="lazy"
                   />
                 </div>
                 <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-24 sm:-bottom-24 md:-bottom-[100px] w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">

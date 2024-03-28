@@ -1,7 +1,15 @@
 ---
+import type { GetStaticPaths } from "astro";
 import Layout from "../layouts/Layout.astro";
 import { PRODUCTS } from "../lib/products";
 import WhatsApp from "../components/icons/SocialMedia/WhatsApp.astro";
+
+// export function getStaticPaths () {
+//   return PRODUCTS.map(({id}) => ({
+//     params: {id},
+//   }))
+// }
+
 const { product } = Astro.params;
 
 const infoProduct = PRODUCTS.find((p) => p.id == product);
@@ -21,6 +29,7 @@ if (!infoProduct) {
           class="my-5 col-span-1 overflow-hidden rounded-lg border-2 shadow-inner shadow-slate-800"
         >
           <img
+            transition:name="moto-big-photo"
             class="w-96 h-80 cursor-move transition mx-auto z-99 hover:scale-105"
             decoding="async"
             src={infoProduct.img}
@@ -30,22 +39,25 @@ if (!infoProduct) {
         </div>
         <footer class="flex justify-center col-span-2 gap-3">
           <img
-            class="w-48 h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
+            class="w-48 thumbnail h-48 border-2 opacity-70 cursor-pointer rounded-2xl transition"
             src={infoProduct.img}
             alt=""
-            id="thumbnail"
+            decoding="async"
+            loading="lazy"
           />
           <img
-            class="w-48 h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
-            src={infoProduct.img}
+            class="w-48 thumbnail h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
+            src="https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_640.png"
             alt=""
-            id="thumbnail"
+            decoding="async"
+            loading="lazy"
           />
           <img
-            class="w-48 h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
-            src={infoProduct.img}
+            class="w-48 thumbnail h-48 border-2 opacity-70 cursor-pointer rounded-2xl"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
             alt=""
-            id="thumbnail"
+            decoding="async"
+            loading="lazy"
           />
         </footer>
       </div>
@@ -53,12 +65,16 @@ if (!infoProduct) {
         <div
           class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-300"
         >
-          <h1 class="font-extrabold text-5xl text-center">
+          <h1 class="font-extrabold text-3xl text-center">
             {infoProduct.name}
           </h1>
-          <p class="text-xl">{infoProduct.materials}</p>
+          <p class="text-base font-extrabold italic">{infoProduct.materials}</p>
           <p class="text-base">{infoProduct.description}</p>
-          <p class="text-left"><span class="text-green-500 font-extrabold text-left">Envío gratis</span> a todo el país.</p>
+          <p class="text-left">
+            <span class="text-green-500 font-extrabold text-left"
+              >Envío gratis</span
+            > a todo el país.
+          </p>
           <div
             class="inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg hover:scale-105 hover:bg-slate-400 transition"
           >
@@ -69,19 +85,44 @@ if (!infoProduct) {
         <div
           class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-300"
         >
-          <h2 class="font-extrabold text-2xl text-center">
-            Medios de Pago
-          </h2>
-          
-          <div
-            class="flex justify-center items-center gap-5"
-          >
-            <img class="size-12 cursor-pointer hover:scale-105 transition" decoding="async" loading="lazy" src="/pagos/nequi.avif" alt="Pago por nequi" title="Pago por nequi">
-            <img class="size-12 cursor-pointer hover:scale-105 transition" decoding="async" loading="lazy" src="/pagos/bancolombia.avif" alt="Pago por Bancolombia" title="Pago por Bancolombia">
-            <img class="size-12 cursor-pointer hover:scale-105 transition" decoding="async" loading="lazy" src="/pagos/efectivo.avif" alt="Pago en enfectivo" title="Pago en enfectivo">
+          <h2 class="font-extrabold text-2xl text-center">Medios de Pago</h2>
+
+          <div class="flex justify-center items-center gap-5">
+            <img
+              class="size-14 cursor-pointer hover:scale-105 transition"
+              decoding="async"
+              loading="lazy"
+              src="/pagos/nequi.avif"
+              alt="Pago por nequi"
+              title="Pago por nequi"
+            />
+            <img
+              class="size-14 cursor-pointer hover:scale-105 transition"
+              decoding="async"
+              loading="lazy"
+              src="/pagos/bancolombia.avif"
+              alt="Pago por Bancolombia"
+              title="Pago por Bancolombia"
+            />
+            <img
+              class="size-14 cursor-pointer hover:scale-105 transition"
+              decoding="async"
+              loading="lazy"
+              src="/pagos/efecty.avif"
+              alt="Pago en efecty"
+              title="Pago en efecty"
+            />
+            <img
+              class="size-16 cursor-pointer hover:scale-105 transition"
+              decoding="async"
+              loading="lazy"
+              src="/pagos/efectivo.avif"
+              alt="Pago en efectivo"
+              title="Pago en efectivo"
+            />
+            
           </div>
         </div>
-        
       </aside>
     </section>
   </main>
@@ -92,27 +133,30 @@ if (!infoProduct) {
     mask-image: linear-gradient(black 80%, red 20%);
   }
 
-  .active{
+  .active {
     opacity: 1;
     filter: brightness(1.2);
-    box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6 );
+    box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
   }
 </style>
 
-<script>
+<script is:inline data-astro-rerun astro:page-load>
 
-      const main_img = document.getElementById('img');
-      const thumbnail = document.querySelectorAll('#thumbnail');
+  const main_img = document.getElementById("img");
+  const thumbnail = document.querySelectorAll(".thumbnail");
 
-      thumbnail.forEach(thumb => {
-        thumb.addEventListener('mouseover', () => {
-          thumbnail.forEach(thumb => {
-            thumb.classList.remove('active');
-          });
+  thumbnail.forEach((thumb) => {
+    thumb.addEventListener("mouseover", () => {
+      thumbnail.forEach((thumb) => {
+        thumb.classList.remove("active");
+      });
 
-          // Agregar la clase 'active' a la miniatura que se hizo clic
-          thumb.classList.add('active');
-          main_img.setAttribute("src", thumb.getAttribute("src"));
-        });
+      // Agregar la clase 'active' a la miniatura que se hizo clic
+      thumb.classList.add("active");
+      main_img.setAttribute("src", thumb.getAttribute("src"));
     });
+  });
+
+
+
 </script>

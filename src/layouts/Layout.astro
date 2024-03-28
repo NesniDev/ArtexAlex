@@ -1,8 +1,8 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import Footer from '@/components/Footer.astro';
 import Header from '../components/Header.astro';
 import Arrow from '@/components/icons/others/arrow.astro';
-import ViewTransitions from 'astro/components/ViewTransitions.astro';
 
 interface Props {
 	title: string;
@@ -20,6 +20,7 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/Icon.ico"/>
 		<title>{title}</title>
+		<!-- <ViewTransitions/> -->
 	</head>
 	<body class="relative" id="inicio">
 		<div class="fixed left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-yellow-400 opacity-20 blur-[100px]">
@@ -31,7 +32,6 @@ const { title, description } = Astro.props;
 		<a href="#inicio" class="vi fixed right-2 bottom-2 bg-yellow-400 rounded-full p-2 text-black transition hover:scale-110 hover:bg-yellow-100">
 			<Arrow class="size-5"/> 
 		</a>
-		<!-- <ViewTransitions/> -->
 	</body>
 </html>
 <style is:global>
