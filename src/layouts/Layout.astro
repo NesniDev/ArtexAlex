@@ -20,13 +20,13 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/Icon.ico"/>
 		<title>{title}</title>
-		<!-- <ViewTransitions/> -->
+		<ViewTransitions />
 	</head>
 	<body class="relative" id="inicio">
 		<div class="fixed left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-yellow-400 opacity-20 blur-[100px]">
 		</div>
 		<!-- <div class="fixed top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(253,208,105,0.5),rgba(255,255,255,0))]"></div> -->
-		<Header/>
+		<Header />
 		<slot />
 		<Footer id="footer"/>
 		<a href="#inicio" class="vi fixed right-2 bottom-2 bg-yellow-400 rounded-full p-2 text-black transition hover:scale-110 hover:bg-yellow-100">

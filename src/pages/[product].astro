@@ -63,27 +63,32 @@ if (!infoProduct) {
       </div>
       <aside class="col-span-1 flex flex-col gap-2">
         <div
-          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-300"
+          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-100"
         >
           <h1 class="font-extrabold text-3xl text-center">
             {infoProduct.name}
           </h1>
-          <p class="text-base font-extrabold italic">{infoProduct.materials}</p>
-          <p class="text-base">{infoProduct.description}</p>
-          <p class="text-left">
+          <p class="text-sm font-extrabold italic">{infoProduct.materials}</p>
+          <p class="text-sm my-3">{infoProduct.description}</p>
+          <p class="text-left text-base ">
             <span class="text-green-500 font-extrabold text-left"
               >Envío gratis</span
+            > a Muzo y Chiquinquirá.
+          </p>
+          <p class="text-left text-base -3">
+            <span class="text-orange-500 font-extrabold text-left"
+              >Envíos</span
             > a todo el país.
           </p>
           <div
-            class="inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg hover:scale-105 hover:bg-slate-400 transition"
+            class="cursor-pointer inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg hover:scale-105 transition"
           >
-            <WhatsApp class="size-5" />
+            <WhatsApp class="size-5 " />
             <a href="/">${infoProduct.price}</a>
           </div>
         </div>
         <div
-          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-300"
+          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-100"
         >
           <h2 class="font-extrabold text-2xl text-center">Medios de Pago</h2>
 
@@ -140,8 +145,11 @@ if (!infoProduct) {
   }
 </style>
 
-<script is:inline data-astro-rerun astro:page-load>
+<script is:inline data-astro-rerun >
+  
+  document.addEventListener("astro:after-swap", ()=> {
 
+    
   const main_img = document.getElementById("img");
   const thumbnail = document.querySelectorAll(".thumbnail");
 
@@ -157,6 +165,5 @@ if (!infoProduct) {
     });
   });
 
-
-
+})
 </script>
