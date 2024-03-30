@@ -22,14 +22,13 @@ if (!infoProduct) {
 <Layout title={`Producto - ${infoProduct.name}`} description="">
   <main class="m-auto max-w-5xl mb-14">
     <section
-      class="grid grid-cols-[1fr_1fr_350px] place-items-center place-content-center gap-32"
+      class="grid px-2 grid-cols-[1fr] md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_350px] place-items-center place-content-center gap-5 lg:gap-32"
     >
       <div class="col-span-2">
         <div
           class="my-5 col-span-1 overflow-hidden rounded-lg border-2 shadow-inner shadow-slate-800"
         >
           <img
-            transition:name="moto-big-photo"
             class="w-full h-96 transition mx-auto z-99 hover:scale-105 border-8 border-slate-900"
             decoding="async"
             src={infoProduct.img}
@@ -37,7 +36,9 @@ if (!infoProduct) {
             id="img"
           />
         </div>
-        <footer class="flex justify-center col-span-2 gap-3">
+        <footer
+          class="flex flex-wrap md:flex-nowrap justify-center col-span-1 lg:col-span-3 gap-3"
+        >
           <img
             class="w-48 thumbnail h-40 border-2 opacity-70 cursor-pointer rounded-2xl transition"
             src={infoProduct.img}
@@ -61,7 +62,9 @@ if (!infoProduct) {
           />
         </footer>
       </div>
-      <aside class="col-span-1 flex flex-col gap-2">
+      <aside
+        class="col-span-2 md:col-span-2 lg:col-span-1 flex flex-col gap-x-2"
+      >
         <div
           class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-100"
         >
@@ -71,25 +74,24 @@ if (!infoProduct) {
           <p class="text-sm font-extrabold italic">{infoProduct.materials}</p>
           <p class="text-sm my-3">{infoProduct.description}</p>
           <p class="text-sm">
-            <span class="text-orange-500 font-extrabold text-left"
-              >Envíos</span
-            > a todo el país.
+            <span class="text-orange-500 font-extrabold text-left">Envíos</span>
+            a todo el país.
           </p>
-          <p class="text-sm ">
-            Para Muzo y Chiquinquirá <span class="text-green-500 font-extrabold text-left"
-            >son gratis</span
-          >
+          <p class="text-sm">
+            Para Muzo y Chiquinquirá <span
+              class="text-green-500 font-extrabold text-left">son gratis</span
+            >
           </p>
-          
+
           <div
             class="cursor-pointer inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg hover:scale-105 transition"
           >
-            <WhatsApp class="size-5 " />
+            <WhatsApp class="size-5" />
             <a href="/">${infoProduct.price}</a>
           </div>
         </div>
         <div
-          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-100"
+          class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 mt-3 border-2 p-7 border-gray-100"
         >
           <h2 class="font-extrabold text-2xl text-center">Medios de Pago</h2>
 
@@ -126,7 +128,6 @@ if (!infoProduct) {
               alt="Pago en efectivo"
               title="Pago en efectivo"
             />
-            
           </div>
         </div>
       </aside>
@@ -143,16 +144,15 @@ if (!infoProduct) {
     opacity: 1;
     filter: brightness(1.2);
     box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
-    border: 5px solid rgba(1, 23, 46,0.4);
+    border: 5px solid rgba(1, 23, 46, 0.4);
   }
 </style>
 
-<script>    
-    
-    let main_img = document.getElementById("img");
-    let thumbnail = document.querySelectorAll(".thumbnail");
-    
-    thumbnail.forEach((thumb) => {
+<script>
+  let main_img = document.getElementById("img");
+  let thumbnail = document.querySelectorAll(".thumbnail");
+
+  thumbnail.forEach((thumb) => {
     thumb.addEventListener("mouseover", () => {
       thumbnail.forEach((thumb) => {
         thumb.classList.remove("active");
@@ -163,5 +163,4 @@ if (!infoProduct) {
       main_img.setAttribute("src", thumb.getAttribute("src"));
     });
   });
-
 </script>

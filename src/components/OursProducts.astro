@@ -8,46 +8,41 @@ const { id } = Astro.props;
   <h2 class="text-center font-extrabold">Productos Destacados</h2>
   <Container>
     <div
-      class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
+      class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
     >
-    {
-        PRODUCTS.slice(0,3).map((product) => (
-          
-
-            <article class="mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden h-72 w-full rounded-2xl hover:duration-700">
-              <a href={`/${product.id}/`}>
-                <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
-                  <img
-                  transition:name="moto-big-photo"
-                    class="w-full h-64 transition "
-                    decoding="async"
-                    loading="lazy"
-                    src={product.img}
-                    alt={`imagen del producto ${product.name}`}
-                  />
-                </div>
-                <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-24 sm:-bottom-24 md:-bottom-[100px] w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-                  <div class="flex flex-row gap-6 justify-between mb-1">
-                    <div class="flex flex-col">
-                      <span class="uppercase font-extrabold text-white text-xs pb-2">
-                        {product.name}
-                      </span>
-                      <span class="text-red-400/80 font-bold text-xs">
-                        {product.materials}
-                      </span>
-                    </div>
-                    <div class="flex flex-row justify-start items-start">
-                      <span class="text-green-500 text-xs font-extrabold justify-items-end text-end">
-                        $ {product.price}
-                      </span>
-                    </div>
+      {
+        PRODUCTS.slice(0, 3).map((product) => (
+          <article class="mt-7 relative duration-500 shadow-md shadow-neutral-600 cursor-pointer group overflow-hidden h-72 w-full rounded-2xl hover:duration-700">
+            <a href={`/${product.id}/`}>
+              <div class="ease-in bg-gradient-to-b from-transparent to-gray-500 transition img">
+                <img
+                  class="w-full h-64 transition "
+                  decoding="async"
+                  loading="lazy"
+                  src={product.img}
+                  alt={`imagen del producto ${product.name}`}
+                />
+              </div>
+              <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-[85px]  md:-bottom-[83px] lg:-bottom-[100px]  w-full p-3 flex flex-col flex-wrap gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+                <div class="flex flex-row gap-6 justify-between mb-1">
+                  <div class="flex flex-col">
+                    <span class="uppercase font-extrabold text-white text-xs pb-2">
+                      {product.name}
+                    </span>
+                    <span class="text-red-400/80 font-bold text-xs">
+                      {product.materials}
+                    </span>
                   </div>
-                  <p class="text-neutral-300 text-xs">
-                    {product.description}
-                  </p>
+                  <div class="flex flex-row justify-start items-start">
+                    <span class="text-green-500 text-xs font-extrabold justify-items-end text-end">
+                      $ {product.price}
+                    </span>
+                  </div>
                 </div>
-                </a>
-            </article>
+                <p class="text-neutral-300 text-xs">{product.description}</p>
+              </div>
+            </a>
+          </article>
         ))
       }
     </div>
@@ -59,13 +54,15 @@ const { id } = Astro.props;
 </section>
 
 <style>
-  .grids {
+  #grids {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 20px;
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+    gap: 5px;
   }
-  article:hover .img{
-        transform: scale(1.05);
-        filter: saturate(1.5);
-    }
+  article:hover .img {
+    transform: scale(1.05);
+    filter: saturate(1.5);
+  }
 </style>
