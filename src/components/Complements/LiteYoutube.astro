@@ -1,13 +1,13 @@
 ---
 interface Props {
-    videoId: string;
-    title: string;
-    backgroundImage: string;
+  videoId: string;
+  title: string;
+  backgroundImage: string;
 }
 
-const {videoId, title, backgroundImage} = Astro.props
-
+const { videoId, title, backgroundImage } = Astro.props;
 ---
+
 <lite-youtube
   videoid={videoId}
   style=`background-image: url('${backgroundImage}');`
@@ -17,8 +17,7 @@ const {videoId, title, backgroundImage} = Astro.props
     class="lty-playbtn"
     title="Play Video"
   >
-    <span class="lyt-visually-hidden">{title}</span
-    >
+    <span class="lyt-visually-hidden">{title}</span>
   </a>
 </lite-youtube>
 
