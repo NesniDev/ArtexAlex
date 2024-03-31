@@ -28,3 +28,25 @@ import Container from "./Container.astro";
     </div>
   </Container>
 </section>
+
+<style>
+  @import url("https://fonts.cdnfonts.com/css/ever-looser-untextured");
+  @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
+
+  :root {
+    --letterCaviar: "Caviar Dreams", system-ui, sans-serif;
+    --letterTitle: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
+    --letterRayville: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
+      sans-serif;
+  }
+  h6,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--letterRayville);
+  }
+  h1,
+  h2 {
+    font-family: var(--letterTitle);
+  }
+</style>

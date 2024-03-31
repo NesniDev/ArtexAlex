@@ -1,0 +1,1 @@
+const e=document.querySelector(".menuview"),t=document.querySelector(".menuclose"),s=document.querySelector("#nav");e.addEventListener("click",()=>{s.classList.toggle("hidden"),e.classList.toggle("opacity-0"),t.classList.toggle("opacity-0")});t.addEventListener("click",()=>{s.classList.toggle("hidden"),e.classList.toggle("opacity-0"),t.classList.toggle("opacity-0")});
