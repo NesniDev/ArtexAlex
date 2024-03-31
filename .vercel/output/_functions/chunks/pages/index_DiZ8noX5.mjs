@@ -1,9 +1,9 @@
 /* empty css                                */
 import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, h as renderComponent, s as spreadAttributes, f as addAttribute, n as Fragment, o as createTransitionScope } from '../astro_Czy6XCBb.mjs';
-import { P as PRODUCTS, c as $$Layout } from './AllProducts_BZ9wbmYq.mjs';
+import { P as PRODUCTS, c as $$Layout } from './AllProducts_CReey39o.mjs';
 import { $ as $$Container } from './404_B5mo-mFm.mjs';
 /* empty css                          */
-import { $ as $$WhatsApp } from './Contact_CQuT76_7.mjs';
+import { $ as $$WhatsApp } from './Contact_Cw2qTXos.mjs';
 
 const $$Astro$e = createAstro();
 const $$Information = createComponent(async ($$result, $$props, $$slots) => {
@@ -163,7 +163,7 @@ const $$Astro$1 = createAstro();
 const $$SectionMain = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$SectionMain;
-  return renderTemplate`${maybeRenderHead()}<section class="mb-28 md:mt-20 md:mb-36"> ${renderComponent($$result, "Container", $$Container, {}, { "default": ($$result2) => renderTemplate` <div class="mt-0 grid grid-cols-1 md:grid-cols-5 items-center h-full"> <div class="text-center md:text-left col-span-1 md:col-span-3"> <h2 class="text-8xl mb-7">Artesanías en Metal y Madera</h2> <p class="text-lg">
+  return renderTemplate`${maybeRenderHead()}<section class="mb-28 md:mt-20 md:mb-36" data-astro-cid-uvn3hc3q> ${renderComponent($$result, "Container", $$Container, { "data-astro-cid-uvn3hc3q": true }, { "default": ($$result2) => renderTemplate` <div class="mt-0 grid grid-cols-1 md:grid-cols-5 items-center h-full" data-astro-cid-uvn3hc3q> <div class="text-center md:text-left col-span-1 md:col-span-3" data-astro-cid-uvn3hc3q> <h2 class="text-8xl mb-7" data-astro-cid-uvn3hc3q>Artesanías en Metal y Madera</h2> <p class="text-lg" data-astro-cid-uvn3hc3q>
 ¡Descubre el encanto de la reinvención en ArtexAlex! Sumérgete en un
           mundo donde los desechos se transforman en verdaderas obras maestras
           de metal y madera. En nuestro local, cada pieza cuenta una historia de
@@ -171,7 +171,7 @@ const $$SectionMain = createComponent(async ($$result, $$props, $$slots) => {
           tu hogar con piezas únicas. Desde esculturas impresionantes hasta
           muebles elegantes, en ArtexAlex encontrarás la perfecta combinación de
           arte y conciencia ambiental.
-</p> </div> <picture class="col-span-1 md:col-span-2 mx-auto mt-10 md:mt-0"> <img class="absolute top-44 bottom-0 right-4 -z-10 opacity-20 sm:top-44 sm:bottom-0 sm:right-36 md:opacity-100 md:static md:w-full w-96" decoding="async" src="/mainImg.avif" alt=""> </picture> </div> ` })} </section>`;
+</p> </div> <picture class="col-span-1 md:col-span-2 mx-auto mt-10 md:mt-0" data-astro-cid-uvn3hc3q> <img class="absolute top-44 bottom-0 right-4 -z-10 opacity-20 sm:top-44 sm:bottom-0 sm:right-36 md:opacity-100 md:static md:w-full w-96" decoding="async" src="/mainImg.avif" alt="" data-astro-cid-uvn3hc3q> </picture> </div> ` })} </section> `;
 }, "C:/Users/neider_nieto/Desktop/Web/ArtexAlex/src/components/SectionMain.astro", void 0);
 
 const $$Astro = createAstro();
