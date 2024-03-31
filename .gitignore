@@ -5,6 +5,10 @@ dist/
 
 .netlify/
 
+# vercel
+
+.vercel/
+
 # generated types
 .astro/
 
