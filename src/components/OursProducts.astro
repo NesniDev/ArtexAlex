@@ -5,7 +5,7 @@ const { id } = Astro.props;
 ---
 
 <section class="flex flex-col" id={id}>
-  <h2 class="text-center font-extrabold">Productos Destacados</h2>
+  <h2 class="text-center text-4xl">Productos Destacados</h2>
   <Container>
     <div
       class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
@@ -26,9 +26,9 @@ const { id } = Astro.props;
               <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-[85px]  md:-bottom-[83px] lg:-bottom-[100px]  w-full p-3 flex flex-col flex-wrap gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
                 <div class="flex flex-row gap-6 justify-between mb-1">
                   <div class="flex flex-col">
-                    <span class="uppercase font-extrabold text-white text-xs pb-2">
+                    <h3 class="uppercase font-extrabold text-white text-base pb-2">
                       {product.name}
-                    </span>
+                    </h3>
                     <span class="text-red-400/80 font-bold text-xs">
                       {product.materials}
                     </span>
