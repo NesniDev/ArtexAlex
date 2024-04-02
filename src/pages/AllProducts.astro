@@ -7,8 +7,8 @@ const { id } = Astro.props;
 
 <Layout title="Productos | Accede a cada uno de los productos" description="">
   <section class="flex flex-col mt-10" id={id}>
-    <h2 class="text-center text-6xl">Todos Nuestros Productos</h2>
     <Container>
+      <h2 class="text-center text-6xl">Todos Nuestros Productos</h2>
       <div
         class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
       >
@@ -56,11 +56,6 @@ const { id } = Astro.props;
   </section>
 </Layout>
 <style>
-  .grids {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 20px;
-  }
   article:hover .img {
     transform: scale(1.05);
     filter: saturate(1.5);
