@@ -1,1 +1,0 @@
-import"./hoisted.DNtPiekx.js";let r=document.getElementById("img"),t=document.querySelectorAll(".thumbnail");t.forEach(e=>{e.addEventListener("mouseover",()=>{t.forEach(i=>{i.classList.remove("active")}),e.classList.add("active"),r.setAttribute("src",e.getAttribute("src"))})});
