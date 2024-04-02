@@ -48,7 +48,7 @@ const { title, description } = Astro.props;
       sans-serif;
   }
   html {
-    font-family: "Caviar Dreams", system-ui, sans-serif;
+    font-family: var(--letterCaviar);
     background: #fff;
     scroll-behavior: smooth;
   }
@@ -57,12 +57,11 @@ const { title, description } = Astro.props;
   h3,
   h4,
   h5 {
-    font-family: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
-      sans-serif;
+    font-family: var(--letterRayville);
   }
   h1,
   h2 {
-    font-family: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
+    font-family: var(--letterTitle);
   }
   .vi {
     transition: animation 0.2s ease-in-out;
