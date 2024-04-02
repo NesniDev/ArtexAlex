@@ -13,6 +13,10 @@ dist/
 
 .cloudflare/
 
+# vercel
+
+.vscode/
+
 # generated types
 .astro/
 
