@@ -4,7 +4,11 @@ import Container from "@/components/Container.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="Productos | Accede a cada uno de los productos" description="">
+<Layout
+  title="Productos | Accede a cada uno de los productos"
+  description=""
+  transition:persist
+>
   <section class="flex flex-col mt-10">
     <h2 class="text-center text-6xl">Todos Nuestros Productos</h2>
     <Container>
@@ -54,23 +58,3 @@ import Layout from "@/layouts/Layout.astro";
     >
   </section>
 </Layout>
-<style>
-  @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
-  @import url("https://fonts.cdnfonts.com/css/ever-looser-untextured");
-  @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
-  h6,
-  h3,
-  h4,
-  h5 {
-    font-family: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
-      sans-serif;
-  }
-  h1,
-  h2 {
-    font-family: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
-  }
-  article:hover .img {
-    transform: scale(1.05);
-    filter: saturate(1.5);
-  }
-</style>

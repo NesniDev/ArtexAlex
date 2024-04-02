@@ -19,7 +19,11 @@ if (!infoProduct) {
 }
 ---
 
-<Layout title={`Producto - ${infoProduct.name}`} description="">
+<Layout
+  title={`Producto - ${infoProduct.name}`}
+  description=""
+  transition:persist
+>
   <main class="m-auto max-w-5xl mb-14">
     <section
       class="grid px-2 grid-cols-[1fr] md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_350px] place-items-center place-content-center gap-5 lg:gap-32"
