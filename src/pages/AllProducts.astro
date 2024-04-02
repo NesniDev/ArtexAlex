@@ -2,13 +2,12 @@
 import { PRODUCTS } from "@/lib/products";
 import Container from "@/components/Container.astro";
 import Layout from "@/layouts/Layout.astro";
-const { id } = Astro.props;
 ---
 
 <Layout title="Productos | Accede a cada uno de los productos" description="">
-  <section class="flex flex-col mt-10" id={id}>
+  <section class="flex flex-col mt-10">
+    <h2 class="text-center text-6xl">Todos Nuestros Productos</h2>
     <Container>
-      <h2 class="text-center text-6xl">Todos Nuestros Productos</h2>
       <div
         class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
       >
@@ -51,11 +50,25 @@ const { id } = Astro.props;
     </Container>
     <a
       class="mx-auto text-center text-base mt-10 bg-slate-600 hover:bg-yellow-200 transition hover:text-[#012029] text-white font-extrabold px-3 py-1 rounded-lg inline-block"
-      href="/AllProducts">Ver Todos los Productos</a
+      href="/AllProducts">Ver Más Productos</a
     >
   </section>
 </Layout>
 <style>
+  @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
+  @import url("https://fonts.cdnfonts.com/css/ever-looser-untextured");
+  @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
+  h6,
+  h3,
+  h4,
+  h5 {
+    font-family: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
+      sans-serif;
+  }
+  h1,
+  h2 {
+    font-family: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
+  }
   article:hover .img {
     transform: scale(1.05);
     filter: saturate(1.5);
