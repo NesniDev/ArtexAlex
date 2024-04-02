@@ -136,6 +136,15 @@ if (!infoProduct) {
 </Layout>
 
 <style>
+  @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
+  @import url("https://fonts.cdnfonts.com/css/ever-looser-untextured");
+  @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
+  :root {
+    --letterCaviar: "Caviar Dreams", system-ui, sans-serif;
+    --letterTitle: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
+    --letterRayville: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
+      sans-serif;
+  }
   #img {
     mask-image: linear-gradient(black 80%, red 20%);
   }
@@ -145,6 +154,25 @@ if (!infoProduct) {
     filter: brightness(1.2);
     box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
     border: 5px solid rgba(1, 23, 46, 0.4);
+  }
+  /* PRINCIPAL*/
+
+  html {
+    font-family: var(--letterCaviar);
+  }
+  a {
+    font-weight: bold;
+  }
+
+  h6,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--letterRayville);
+  }
+  h1,
+  h2 {
+    font-family: var(--letterTitle);
   }
 </style>
 
