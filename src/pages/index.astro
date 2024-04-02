@@ -1,7 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Information from "@/components/Information.astro";
-import Container from "@/components/Container.astro";
 import Services from "@/components/Services.astro";
 import Video from "@/components/Video.astro";
 import Adress from "@/components/Adress.astro";
@@ -26,3 +25,29 @@ import SectionMain from "@/components/SectionMain.astro";
     <Adress id="ubicacion" />
   </main>
 </Layout>
+<style>
+  @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
+  @import url("https://fonts.cdnfonts.com/css/ever-looser-untextured");
+  @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
+
+  :root {
+    --letterCaviar: "Caviar Dreams", system-ui, sans-serif;
+    --letterTitle: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
+    --letterRayville: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
+      sans-serif;
+  }
+  html {
+    font-family: var(--letterCaviar);
+  }
+
+  h6,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--letterRayville);
+  }
+  h1,
+  h2 {
+    font-family: var(--letterTitle);
+  }
+</style>
