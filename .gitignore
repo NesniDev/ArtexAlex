@@ -9,6 +9,10 @@ dist/
 
 .vercel/
 
+# vercel
+
+.cloudflare/
+
 # generated types
 .astro/
 
