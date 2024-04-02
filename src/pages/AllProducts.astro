@@ -1,7 +1,7 @@
 ---
 import { PRODUCTS } from "@/lib/products";
 import Container from "@/components/Container.astro";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 const { id } = Astro.props;
 ---
 
@@ -11,7 +11,6 @@ const { id } = Astro.props;
     <Container>
       <div
         class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-between gap-5 place-items-center mx-auto px-10"
-        id=""
       >
         {
           PRODUCTS.map((product) => (
@@ -23,7 +22,7 @@ const { id } = Astro.props;
                     decoding="async"
                     loading="lazy"
                     src={product.img}
-                    alt={`imagen del producto ${product.name}`}
+                    alt={`imagen del producto - ${product.name}`}
                   />
                 </div>
                 <div class="absolute bg-gradient-to-t from-gray-400 to-gray-800 -bottom-[85px]  md:-bottom-[83px] lg:-bottom-[100px]  w-full p-3 flex flex-col flex-wrap gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
