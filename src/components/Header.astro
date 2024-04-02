@@ -98,26 +98,26 @@ import X from "./icons/others/x.astro";
 </header>
 
 <style>
-  @media (min-width: 768px) {
-    header {
-      transition: animation 0.2s ease-in;
-      animation: blur-header linear both;
-      animation-timeline: scroll(root block);
-      animation-range: 0 10px;
-    }
+  /* @media (min-width: 768px) { */
+  header {
+    transition: animation 0.2s ease-in;
+    animation: blur-header linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 10px;
+  }
 
-    @keyframes blur-header {
-      1% {
-        color: white;
-      }
-      100% {
-        z-index: 100;
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(5px);
-        color: white;
-      }
+  @keyframes blur-header {
+    1% {
+      color: white;
+    }
+    100% {
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      color: white;
     }
   }
+  /* } */
   .menuview,
   .menuclose {
     transition: opacity 0.2s ease-in-out;
