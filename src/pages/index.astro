@@ -13,7 +13,6 @@ import SectionMain from "@/components/SectionMain.astro";
 <Layout
   title="ArtexAlex | Transforma Basura en Belleza: Creaciones Únicas con Metal y Madera Reciclados"
   description=""
-  transition:persist
 >
   <main>
     <SectionMain />
@@ -26,32 +25,3 @@ import SectionMain from "@/components/SectionMain.astro";
     <Adress id="ubicacion" />
   </main>
 </Layout>
-<style>
-  @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
-  @import url("https://fonts.cdnfonts.com/css/ever-looser-untextured");
-  @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
-
-  :root {
-    --letterCaviar: "Caviar Dreams", system-ui, sans-serif;
-    --letterTitle: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
-    --letterRayville: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
-      sans-serif;
-  }
-  html {
-    font-family: var(--letterCaviar);
-  }
-  a {
-    font-weight: bold;
-  }
-
-  h6,
-  h3,
-  h4,
-  h5 {
-    font-family: var(--letterRayville);
-  }
-  h1,
-  h2 {
-    font-family: var(--letterTitle);
-  }
-</style>
