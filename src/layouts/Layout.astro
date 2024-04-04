@@ -42,30 +42,13 @@ const { title, description } = Astro.props;
   @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
   :root {
     --letterCaviar: "Caviar Dreams", system-ui, sans-serif;
-    --letterTitle: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
-    --letterRayville: "Rayville Free Personal Use", "Caviar Dreams", system-ui,
-      sans-serif;
   }
   html {
     background: #fff;
     scroll-behavior: smooth;
-  }
-  a,
-  p,
-  span {
     font-family: var(--letterCaviar);
   }
 
-  h6,
-  h3,
-  h4,
-  h5 {
-    font-family: var(--letterRayville);
-  }
-  h1,
-  h2 {
-    font-family: var(--letterTitle);
-  }
   .vi {
     transition: animation 0.2s ease-in-out;
     animation: inicio linear both;
