@@ -40,7 +40,6 @@ const { title, description } = Astro.props;
   @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
   @import url("https://fonts.cdnfonts.com/css/ever-looser-untextured");
   @import url("https://fonts.cdnfonts.com/css/rayville-free-personal-use");
-
   :root {
     --letterCaviar: "Caviar Dreams", system-ui, sans-serif;
     --letterTitle: "EVER LOOSER", "Caviar Dreams", system-ui, sans-serif;
@@ -51,7 +50,9 @@ const { title, description } = Astro.props;
     background: #fff;
     scroll-behavior: smooth;
   }
-  body {
+  a,
+  p,
+  span {
     font-family: var(--letterCaviar);
   }
 
