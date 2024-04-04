@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        paragraph: ["Caviar Dreams", "system-ui", "sans-serif"],
         title: ["EVER LOOSER", "Caviar Dreams", "system-ui", "sans-serif"],
         subTitle: [
           "Rayville Free Personal Use",
