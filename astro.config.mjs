@@ -9,6 +9,6 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   integrations: [tailwind()],
   output: "server",
-  adapter: cloudflare(),
+  adapter: vercel(),
   site: "https://www.my-site.dev",
 });
