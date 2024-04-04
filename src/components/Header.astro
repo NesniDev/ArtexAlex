@@ -6,7 +6,6 @@ import X from "./icons/others/x.astro";
 
 <header
   class="flex justify-between items-center py-8 md:py-2 md:bg-transparent sticky top-0 left-0 z-[99]"
-  transition:persist
 >
   <Container>
     <a href="/" class="z-[9999] md:z-0">
@@ -124,20 +123,3 @@ import X from "./icons/others/x.astro";
     transition: opacity 0.2s ease-in-out;
   }
 </style>
-
-<script>
-  const $menuView = document.querySelector(".menuview");
-  const $menuClose = document.querySelector(".menuclose");
-  const $nav = document.querySelector("#nav");
-
-  $menuView.addEventListener("click", () => {
-    $nav.classList.toggle("hidden");
-    $menuView.classList.toggle("opacity-0");
-    $menuClose.classList.toggle("opacity-0");
-  });
-  $menuClose.addEventListener("click", () => {
-    $nav.classList.toggle("hidden");
-    $menuView.classList.toggle("opacity-0");
-    $menuClose.classList.toggle("opacity-0");
-  });
-</script>
