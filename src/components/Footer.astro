@@ -1,74 +1,127 @@
 ---
-import Facebook from "@/components/icons/SocialMedia/Facebook.astro"
-import Instagram from "@/components/icons/SocialMedia/Instagram.astro"
-import TikTok from "@/components/icons/SocialMedia/TikTok.astro"
-import WhatsApp from "@/components/icons/SocialMedia/WhatsApp.astro"
-import Container from "./Container.astro"
-const {id} = Astro.props
+import Facebook from "@/components/icons/SocialMedia/Facebook.astro";
+import Instagram from "@/components/icons/SocialMedia/Instagram.astro";
+import TikTok from "@/components/icons/SocialMedia/TikTok.astro";
+import WhatsApp from "@/components/icons/SocialMedia/WhatsApp.astro";
+import Container from "./Container.astro";
+const { id } = Astro.props;
 ---
 
-<footer class="flex flex-col  p-5 mt-10 mx-auto bottom-0 bg-gray-800" id={id}>
-    <Container>
-        <section class="flex flex-col p-5 mt-7 mx-auto text-white">
-            
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="flex flex-col justify-center items-center ">
-                    <img class="w-60" src="/img/ArtexAlex.webp" alt="">
-                    <p class="font-extrabold">Creamos productos innovadores.</p>
-                    <p>infoArtexAlex@gmail.com</p>
-                    <p>(+57) 313 240 5135 </p>
-                    <div class="flex flex-row gap-3 justify-center items-center py-0 md:py-2 ">
-                        <a class="p-1 rounded-full hover:bg-white hover:contrast-150 transition" href="/">
-                            <Facebook  class="size-6"/>
-                        </a>
-                        <a class="p-1 rounded-full hover:bg-white hover:contrast-150 transition" href="/">
-                            <Instagram class="size-6"/>
-                        </a>
-                        <a class="p-1 rounded-full hover:bg-white hover:contrast-150 transition" href="/">
-                            <TikTok class="size-6"/>
-                        </a>
-                        <a class="p-1 rounded-full hover:bg-white hover:contrast-150 transition" href="/">
-                            <WhatsApp class="size-6"/>
-                        </a>
-                    </div>
-                </div>
-                <div class="flex flex-row flex-grow justify-center items-center gap-5">
-                    <div class="flex items-start flex-wrap flex-grow justify-center gap-8 mb-5">
-                        <div  class="text-center">
-                            <p class="font-extrabold text-center mb-3" >Servicios</p>
-                            <ul>
-                                <li><p>Diseños a gran escala</p></li>
-                                <li><p>Mini diseños</p></li>
-                                <li><p>Diseños en madera</p></li>
-                                <li><p>Diseños en Metal</p></li>
-                            </ul>
-                        </div>
-                        <div class="text-center mx-auto">
-                            <p class="font-extrabold text-center mb-3" >Enlaces de interés</p>
-                            <ul>
-                                <li class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"><a  href="/#servicios">Servicios</a></li>
-                                <li class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"><a  href="/#productos">Productos</a></li>
-                                <li class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"><a  href="/Contact">Contacto</a></li>
-                                <li class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"><a  href="/#propietario">Propietario</a></li>
-                                
-                            </ul>
-                        </div>
-                        <div class="text-center">
-                            <p class="font-extrabold text-center mb-3">Servicio al cliente</p>
-                            <ul>
-                                <li class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"><a href="/">Politica de privacidad</a></li>
-                                <li class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"><a href="/">Términos y condiciones</a></li>
-                                <li class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"><a href="/">Garantía</a></li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    
-            
-                </div>
+<footer class="flex flex-col p-5 mt-10 mx-auto bottom-0 bg-gray-800" id={id}>
+  <Container>
+    <section class="flex flex-col p-5 mt-7 mx-auto text-white">
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col justify-center items-center">
+          <img class="w-60" src="/img/ArtexAlex.webp" alt="" />
+          <p class="font-extrabold">Creamos productos innovadores.</p>
+          <p>infoArtexAlex@gmail.com</p>
+          <p>(+57) 313 240 5135</p>
+          <div
+            class="flex flex-row gap-3 justify-center items-center py-0 md:py-2"
+          >
+            <a
+              class="p-1 rounded-full hover:bg-white hover:contrast-150 transition"
+              href="/"
+            >
+              <Facebook class="size-6" />
+            </a>
+            <a
+              class="p-1 rounded-full hover:bg-white hover:contrast-150 transition"
+              href="/"
+            >
+              <Instagram class="size-6" />
+            </a>
+            <a
+              class="p-1 rounded-full hover:bg-white hover:contrast-150 transition"
+              href="/"
+            >
+              <TikTok class="size-6" />
+            </a>
+            <a
+              class="p-1 rounded-full hover:bg-white hover:contrast-150 transition"
+              href="/"
+            >
+              <WhatsApp class="size-6" />
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-row flex-grow justify-center items-center gap-5">
+          <div
+            class="flex items-start flex-wrap flex-grow justify-center gap-8 mb-5"
+          >
+            <div class="text-center">
+              <p class="font-extrabold text-center mb-3">Servicios</p>
+              <ul>
+                <li><p>Diseños a gran escala</p></li>
+                <li><p>Mini diseños</p></li>
+                <li><p>Diseños en madera</p></li>
+                <li><p>Diseños en Metal</p></li>
+              </ul>
             </div>
-            <hr class="border-yellow-500">
-            <p class="mt-5 text-lg text-center">Derechos Reservados. Página realiazada por <a class="ml-1 px-1 static md:absolute font-extrabold hover:text-white hover:bg-yellow-600 hover:scale-105 hover:rotate-2 transition" href="/">Ing. Neider Nieto</a></p>
-        </section>
-    </Container>
+            <div class="text-center mx-auto">
+              <p class="font-extrabold text-center mb-3">Enlaces de interés</p>
+              <ul>
+                <li
+                  class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"
+                >
+                  <a href="/#servicios">Servicios</a>
+                </li>
+                <li
+                  class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"
+                >
+                  <a href="/#productos">Productos</a>
+                </li>
+                <li
+                  class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"
+                >
+                  <a href="/Contact">Contacto</a>
+                </li>
+                <li
+                  class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"
+                >
+                  <a href="/#propietario">Propietario</a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-center">
+              <p class="font-extrabold text-center mb-3">Servicio al cliente</p>
+              <ul>
+                <li
+                  class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"
+                >
+                  <a href="/">Politica de privacidad</a>
+                </li>
+                <li
+                  class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"
+                >
+                  <a href="/">Términos y condiciones</a>
+                </li>
+                <li
+                  class="hover:bg-slate-100 hover:text-black hover:scale-105 hover:-rotate-2 transition"
+                >
+                  <a href="/">Garantía</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-yellow-500" />
+      <p class="mt-5 text-lg text-center">
+        Derechos Reservados. Página realiazada por <a
+          class="ml-1 px-1 static md:absolute font-extrabold hover:text-white hover:bg-yellow-600 hover:scale-105 hover:rotate-2 transition"
+          href="/">Ing. Neider Nieto</a
+        >
+      </p>
+    </section>
+  </Container>
 </footer>
+
+<style>
+  @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
+
+  p,
+  a {
+    font-family: "Caviar Dreams", system-ui, sans-serif;
+  }
+</style>

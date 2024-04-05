@@ -4,10 +4,10 @@ import Labour from "@/components/icons/services/Labour.astro";
 import Container from "./Container.astro";
 import Products from "@/components/icons/services/Products.astro";
 
-const {id } = Astro.props
+const { id } = Astro.props;
 ---
 
-<section class="py-16 " id={id}>
+<section class="py-16" id={id}>
   <Container>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-9 md:mx-0 justify-center items-start font-extrabold"
@@ -15,15 +15,18 @@ const {id } = Astro.props
       <article class="flex flex-col justify-center items-center">
         <a
           href="/"
-          class="p-5 hover:scale-110 rounded-full mb-3 bg-green-600 transition hover:bg-[#327D33]  ease-in-out"
+          class="p-5 hover:scale-110 rounded-full mb-3 bg-green-600 transition hover:bg-[#327D33] ease-in-out"
         >
           <Recycle class="size-10 rounded-full" />
         </a>
-        <h6 class="mb-3 text-4xl font-extralight text-center">Reutilización de Materiales</h6>
+        <h6 class="mb-3 text-4xl font-extralight text-center">
+          Reutilización de Materiales
+        </h6>
         <p class="font-extralight text-sm text-center">
           Nuestro enfoque no solo transforma desechos en obras de arte, sino que
-          también contribuye al crecimiento sostenible de la comunidad y
-          del medio ambiente. Juntos crearemos un futuro más verde para las generaciones venideras.
+          también contribuye al crecimiento sostenible de la comunidad y del
+          medio ambiente. Juntos crearemos un futuro más verde para las
+          generaciones venideras.
         </p>
       </article>
       <article class="flex flex-col justify-center items-center">
@@ -50,7 +53,9 @@ const {id } = Astro.props
         >
           <Labour class="size-10 rounded-full" />
         </a>
-        <h6 class="mb-3 text-4xl font-extralight text-center">Mano de Obra Creativa</h6>
+        <h6 class="mb-3 text-4xl font-extralight text-center">
+          Mano de Obra Creativa
+        </h6>
         <p class="font-extralight text-sm text-center">
           En el corazón de cada creación hay una chispa de creatividad que
           enciende la llama de la imaginación. Nuestra mano de obra no se limita
@@ -62,7 +67,9 @@ const {id } = Astro.props
 </section>
 
 <style>
-  section {
-    /* font-family: var(--letterAtomic); */
+  @import url("https://fonts.cdnfonts.com/css/caviar-dreams");
+  p,
+  a {
+    font-family: "Caviar Dreams", system-ui, sans-serif;
   }
 </style>
