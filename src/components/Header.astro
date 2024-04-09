@@ -5,7 +5,7 @@ import X from "./icons/others/x.astro";
 ---
 
 <header
-  class="flex justify-between items-center py-8 md:py-2 md:bg-transparent sticky top-0 left-0 z-[99]"
+  class="flex justify-between items-center py-8 md:py-2 md:bg-transparent md:sticky top-0 left-0 z-[99]"
 >
   <Container>
     <a href="/" class="z-[9999] md:z-0">
@@ -88,7 +88,9 @@ import X from "./icons/others/x.astro";
         </li>
       </ul>
     </nav>
-    <div class="flex md:hidden z-[100] relative bg-slate-900 p-2 rounded-full">
+    <div
+      class="flex md:hidden z-[100] relative bg-slate-900 p-2 rounded-full mr-2"
+    >
       <Menu
         class="absolute opacity-1 cursor-pointer text-white size-7 menuview"
       />
@@ -143,10 +145,23 @@ import X from "./icons/others/x.astro";
     $nav.classList.toggle("hidden");
     $menuView.classList.toggle("opacity-0");
     $menuClose.classList.toggle("opacity-0");
+    // Agregar manejadores de eventos para prevenir el desplazamiento durante el menú abierto
+
+    window.removeEventListener("wheel", preventDefault);
+    window.removeEventListener("touchmove", preventDefault);
+    document.body.classList.toggle("overflow-hidden");
   });
   $menuClose.addEventListener("click", () => {
     $nav.classList.toggle("hidden");
     $menuView.classList.toggle("opacity-0");
     $menuClose.classList.toggle("opacity-0");
+
+    window.addEventListener("wheel", preventDefault, { passive: false });
+    window.addEventListener("touchmove", preventDefault, { passive: false });
+    document.body.classList.toggle("overflow-hidden");
   });
+
+  function preventDefault(e) {
+    e.preventDefault();
+  }
 </script>
