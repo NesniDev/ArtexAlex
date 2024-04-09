@@ -19,7 +19,7 @@ if (!infoProduct) {
 }
 ---
 
-<Layout title={`Producto - ${infoProduct.name}`} description="">
+<Layout title={`Producto - ${infoProduct.id}`} description="">
   <main class="m-auto max-w-5xl mb-14">
     <section
       class="grid px-2 grid-cols-[1fr] md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_350px] place-items-center place-content-center gap-5 lg:gap-32"
@@ -32,7 +32,7 @@ if (!infoProduct) {
             class="w-full h-96 transition mx-auto z-99 hover:scale-105 border-8 border-slate-900"
             decoding="async"
             src={infoProduct.img}
-            alt={`Imagen del producto ${infoProduct.name}`}
+            alt={`Imagen del producto ${infoProduct.id}`}
             id="img"
           />
         </div>
@@ -68,23 +68,23 @@ if (!infoProduct) {
         <div
           class="select-none rounded-md flex flex-col m-auto justify-center items-center max-w-96 gap-2 border-2 p-7 border-gray-100"
         >
-          <h1 class="text-4xl text-center">
+          <!-- <h1 class="text-4xl text-center">
             {infoProduct.name}
           </h1>
           <p class="text-sm font-extrabold italic">{infoProduct.materials}</p>
+           -->
+          <h1 class="text-2xl">Resumen del producto</h1>
           <p class="text-sm my-3 text-justify font-extralight">
             {infoProduct.description}
           </p>
-          <p class="text-sm">
-            <span class="text-orange-500 font-extrabold text-left">Envíos</span>
-            a todo el país.
-          </p>
-
+          <h5 class="text-3xl">Para adquirir nuestros productos</h5>
           <div
-            class="cursor-pointer inline-flex justify-center items-center gap-3 bg-gray-600 text-white px-2 py-1 rounded-lg hover:scale-105 transition"
+            class="cursor-pointer inline-flex justify-center items-center gap-2 bg-gray-600 text-white px-2 py-1.5 rounded-lg hover:scale-105 transition"
           >
-            <WhatsApp class="size-5" />
-            <a href="/">${infoProduct.price}</a>
+            <WhatsApp class="size-6" />
+            <a href="https://wa.link/m96zf2" class="font-medium"
+              >Contáctanos Aquí</a
+            >
           </div>
         </div>
         <div
